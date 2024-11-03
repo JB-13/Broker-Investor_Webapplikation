@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broker Zugang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header" class="section">
+    <h1>Broker-Zugang</h1>
+</div>
+
+<div id="loginSection" class="section">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="loginUsername">Username:</label><br>
+        <input type="text" id="loginUsername" name="loginUsername"><br>
+        <label for="loginPassword">Password:</label><br>
+        <input type="password" id="loginPassword" name="loginPassword"><br><br>
+        <button type="button" id="loginBtn">Login</button>
+    </form>
+    <div id="loginMessage" class="message"></div>
+</div>
+
+<div id="registerSection" class="section">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <label for="regUsername">Username:</label><br>
+        <input type="text" id="regUsername" name="regUsername"><br>
+        <label for="regPassword">Password:</label><br>
+        <input type="password" id="regPassword" name="regPassword"><br>
+        <label for="regCompany">Company:</label><br>
+        <input type="text" id="regCompany" name="regCompany"><br><br>
+        <button type="button" id="registerBtn">Register</button>
+    </form>
+    <div id="registerMessage" class="message"></div>
+</div>
+
+<div id="accountSection" class="section hidden">
+    <h2>Account Information</h2>
+    <p>Broker ID: <span id="outBrokerId"></span></p>
+    <p>Username: <span id="outUsername"></span></p>
+    <p>Access Token: <span id="outAccessToken"></span></p>
+    <button type="button" id="logoutBtn">Logout</button>
+    <button type="button" id="deleteBtn" class="greyBtn">Delete Account</button>
+    <div id="accountMessage" class="message"></div>
+</div>
+
+<div id="assetsSection" class="section hidden">
+    <h2>Your Assets</h2>
+    <form id="createAssetForm">
+        <label for="assetName">Asset Name:</label><br>
+        <input type="text" id="assetName" name="assetName"><br>
+        <label for="assetKind">Asset Kind:</label><br>
+        <select id="assetKind" name="assetKind">
+            <option value="Share">Share</option>
+            <option value="Bond">Bond</option>
+        </select><br><br>
+        <button type="submit">Create Asset</button>
+    </form>
+    <div id="assetsMessage" class="message"></div>
+    <ul id="ownAssetsList"></ul>
+</div>
+
+<div id="error" class="error"></div>
+
+
+<script src="js/broker.js"></script>
+</body>
+</html>
